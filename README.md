@@ -57,3 +57,5 @@ See `CLEANUP-REPORT.md` for this audit and `BACKEND-API.md` for API contracts. E
 - Password recovery: use the administrator-generated link, not email configuration.
 
 Use this installation for local coursework. Replace demo credentials and review deployment configuration before public use.
+
+
