@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content="RideRent vehicle rental: browse vehicles, check dates, and manage your bookings."
+        />
+        <title>Booking Confirmation | RideRent</title>
+        <link rel="icon" href="assets/images/logo/mark.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script type="module" src="assets/js/main.js"></script>
+    </head>
+    <body data-page="booking-confirmation">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header id="site-header"></header>
+        <main id="main" class="container">
+            <div id="alert" class="alert" role="status" tabindex="-1" hidden></div>
+            <div class="page-heading">
+                <span class="eyebrow">RESERVATION RECEIVED</span>
+                <h1>Your booking request has been received.</h1>
+                <p>
+                    A member of the RideRent team will contact you using your registered contact
+                    details to confirm your booking and arrange payment. Please keep your booking
+                    number handy.
+                </p>
+            </div>
+            <div id="booking-detail" class="panel" aria-live="polite">Loading booking…</div>
+            <div class="actions">
+                <a class="button" href="my-bookings.html">My bookings</a
+                ><a class="button secondary" href="vehicles.html">Browse vehicles</a>
+            </div>
+        </main>
+        <footer id="site-footer"></footer>
+        <noscript
+            ><p class="panel">Enable JavaScript to load vehicles and use your account.</p></noscript
+        >
+    </body>
+</html>

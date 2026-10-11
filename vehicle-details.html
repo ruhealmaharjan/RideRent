@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content="RideRent vehicle rental: browse vehicles, check dates, and manage your bookings."
+        />
+        <title>Vehicle Details | RideRent</title>
+        <link rel="icon" href="assets/images/logo/mark.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script type="module" src="assets/js/main.js"></script>
+    </head>
+    <body data-page="vehicle-details">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header id="site-header"></header>
+        <main id="main" class="container">
+            <div id="alert" class="alert" role="status" tabindex="-1" hidden></div>
+            <a class="back-link" href="vehicles.html"> Back to vehicles</a>
+            <div id="vehicle-detail" class="detail-layout" aria-live="polite">
+                <p>Loading vehicle…</p>
+            </div>
+            <section class="section" id="vehicle-reviews">
+                <div class="section-title">
+                    <h2>Customer reviews</h2>
+                    <span id="review-average"></span>
+                </div>
+                <div id="reviews" class="review-grid"></div>
+                <div id="review-notice" class="panel" role="status">
+                    Reviews are available once your rental is Confirmed or Completed.
+                </div>
+                <form method="post" id="review-form" class="panel form-grid" hidden>
+                    <h3 class="full">Write a review</h3>
+                    <p class="full">
+                        Share your experience once your rental is Confirmed or Completed. One review
+                        per booking.
+                    </p>
+                    <label
+                        >Your rental<select
+                            name="booking_id"
+                            id="booking_id"
+                            required
+                        ></select></label
+                    ><label
+                        >Your rating<select name="rating" id="rating" required>
+                            <option value="">Choose a rating</option>
+                            <option value="5">5 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="2">2 stars</option>
+                            <option value="1">1 star</option>
+                        </select></label
+                    ><label
+                        >Your experience<textarea
+                            name="review_text"
+                            id="review_text"
+                            rows="4"
+                            placeholder="How was the vehicle and your rental experience?"
+                            maxlength="2000"
+                            required
+                        ></textarea></label
+                    ><button class="button" type="submit">Submit review</button>
+                </form>
+            </section>
+        </main>
+        <footer id="site-footer"></footer>
+        <noscript
+            ><p class="panel">Enable JavaScript to load vehicles and use your account.</p></noscript
+        >
+    </body>
+</html>

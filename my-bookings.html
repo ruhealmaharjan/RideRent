@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content="RideRent vehicle rental: browse vehicles, check dates, and manage your bookings."
+        />
+        <title>My Bookings | RideRent</title>
+        <link rel="icon" href="assets/images/logo/mark.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script type="module" src="assets/js/main.js"></script>
+    </head>
+    <body data-page="my-bookings">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header id="site-header"></header>
+        <main id="main" class="container">
+            <div id="alert" class="alert" role="status" tabindex="-1" hidden></div>
+            <div class="page-heading">
+                <span class="eyebrow">YOUR JOURNEYS</span>
+                <h1>My bookings.</h1>
+                <p>All your upcoming and past rentals, together.</p>
+            </div>
+            <div class="tabs" id="booking-tabs">
+                <button class="tab active" data-status="">All</button
+                ><button class="tab" data-status="Pending">Pending</button
+                ><button class="tab" data-status="Confirmed">Confirmed</button
+                ><button class="tab" data-status="Completed">Completed</button
+                ><button class="tab" data-status="Cancelled">Cancelled</button>
+            </div>
+            <div id="bookings-list" class="booking-list" aria-live="polite">Loading bookings…</div>
+        </main>
+        <footer id="site-footer"></footer>
+        <noscript
+            ><p class="panel">Enable JavaScript to load vehicles and use your account.</p></noscript
+        >
+    </body>
+</html>

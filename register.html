@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content="RideRent vehicle rental: browse vehicles, check dates, and manage your bookings."
+        />
+        <title>Create Account | RideRent</title>
+        <link rel="icon" href="assets/images/logo/mark.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script type="module" src="assets/js/main.js"></script>
+    </head>
+    <body data-page="register">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header id="site-header"></header>
+        <main id="main" class="container">
+            <div id="alert" class="alert" role="status" tabindex="-1" hidden></div>
+            <section class="auth-layout">
+                <aside class="auth-aside">
+                    <a class="logo" href="index.html">Ride<span>Rent</span></a>
+                    <h2>A good journey<br />starts here.</h2>
+                    <p>Your next ride, a few simple steps away.</p>
+                    <div class="road-mark"></div>
+                    <span>CHOOSE YOUR RIDE. MAKE IT YOURS.</span>
+                </aside>
+                <div class="form-panel">
+                    <div class="page-heading">
+                        <span class="eyebrow">JOIN RIDERENT</span>
+                        <h1>Your journey starts here.</h1>
+                    </div>
+                    <p id="password-rules">
+                        Use at least 8 characters, including one uppercase letter (A-Z), one number,
+                        and one special character such as !, @, or #.
+                    </p>
+                    <form method="post" id="page-form" class="form-grid two">
+                        <label
+                            >Full name<input
+                                type="text"
+                                name="full_name"
+                                id="full_name"
+                                value=""
+                                autocomplete="name"
+                                maxlength="100"
+                                required /></label
+                        ><label
+                            >Phone<input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                value=""
+                                autocomplete="tel"
+                                minlength="7"
+                                maxlength="30"
+                                pattern="[+0-9 ()\-]{7,30}"
+                                required /></label
+                        ><label
+                            >Address<textarea
+                                name="address"
+                                id="address"
+                                rows="3"
+                                maxlength="500"
+                                required
+                            ></textarea></label
+                        ><label
+                            >Driving licence number<input
+                                type="text"
+                                name="driving_license"
+                                id="driving_license"
+                                value=""
+                                maxlength="80"
+                                required /></label
+                        ><label
+                            >Email<input
+                                type="email"
+                                name="email"
+                                id="email"
+                                value=""
+                                autocomplete="email"
+                                maxlength="190"
+                                required /></label
+                        ><label
+                            >Password<span class="password-field"
+                                ><input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    minlength="8"
+                                    maxlength="72"
+                                    autocomplete="new-password"
+                                    aria-describedby="password-rules"
+                                    pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[\p{P}\p{S}]).{8,}"
+                                    title="At least 8 characters, one uppercase letter, one number, and one special character."
+                                    required
+                                /><button
+                                    type="button"
+                                    class="password-toggle"
+                                    aria-label="Show password"
+                                    data-password="password"
+                                >
+                                    Show
+                                </button></span
+                            ></label
+                        ><label
+                            >Confirm password<span class="password-field"
+                                ><input
+                                    type="password"
+                                    name="confirm_password"
+                                    id="confirm_password"
+                                    minlength="8"
+                                    maxlength="72"
+                                    autocomplete="new-password"
+                                    aria-describedby="password-rules"
+                                    pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[\p{P}\p{S}]).{8,}"
+                                    title="At least 8 characters, one uppercase letter, one number, and one special character."
+                                    required
+                                /><button
+                                    type="button"
+                                    class="password-toggle"
+                                    aria-label="Show confirm password"
+                                    data-password="confirm_password"
+                                >
+                                    Show
+                                </button></span
+                            ></label
+                        >
+                        <div class="full">
+                            <button class="button" type="submit">Create account</button>
+                        </div>
+                    </form>
+                    <p class="form-foot">Already registered? <a href="login.html">Log in</a></p>
+                </div>
+            </section>
+        </main>
+        <footer id="site-footer"></footer>
+        <noscript
+            ><p class="panel">Enable JavaScript to load vehicles and use your account.</p></noscript
+        >
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 700 400"
+    role="img"
+    aria-label="suv illustration"
+>
+    <rect width="700" height="400" fill="#e9efed" />
+    <circle cx="506" cy="124" r="100" fill="#dde7e2" />
+    <path d="M60 306H642" stroke="#baccc2" stroke-width="2" />
+    <ellipse cx="350" cy="317" rx="245" ry="16" fill="#cbd8d0" />
+    <path d="M200 231 L247 145 Q260 128 292 128 H417 Q445 128 463 156 L519 229Z" fill="#2f6957" />
+    <path d="M255 214 L282 152 H338 V214Z M351 152 H414 L457 214Z" fill="#bfd4d5" />
+    <path d="M141 220 Q320 205 531 225 L568 249 V288 H129 V250Z" fill="#2f6957" />
+    <path d="M139 247h50 M514 246h37" stroke="#f2ead0" stroke-width="13" />
+    <path d="M325 236h25 M421 236h25" stroke="#d9e5e1" stroke-width="4" />
+    <circle cx="225" cy="282" r="46" fill="#203130" />
+    <circle cx="225" cy="282" r="24" fill="#afc1ba" />
+    <circle cx="225" cy="282" r="12" fill="#526961" />
+    <circle cx="474" cy="282" r="46" fill="#203130" />
+    <circle cx="474" cy="282" r="24" fill="#afc1ba" />
+    <circle cx="474" cy="282" r="12" fill="#526961" />
+</svg>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Compare vehicles | RideRent</title>
+        <link rel="icon" href="assets/images/logo/mark.svg" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script type="module" src="assets/js/main.js"></script>
+    </head>
+    <body data-page="compare">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header id="site-header"></header>
+        <main id="main" class="container compare-page">
+            <div id="alert" class="alert" role="status" tabindex="-1" hidden></div>
+            <section class="compare-header">
+                <div>
+                    <span class="eyebrow">FIND YOUR BEST FIT</span>
+                    <h1>Compare vehicles</h1>
+                    <p>
+                        Your options, side by side. Find the right balance of price, space and
+                        comfort for your journey.
+                    </p>
+                </div>
+                <a class="button" href="vehicles.html">Add a vehicle</a>
+            </section>
+            <div class="compare-toolbar">
+                <div>
+                    <strong id="compare-count" role="status">0 of 3 vehicles selected</strong
+                    ><span>Daily prices in NPR · Select up to three</span>
+                </div>
+                <button
+                    class="button small secondary"
+                    type="button"
+                    data-clear-compare
+                    id="compare-clear"
+                    hidden
+                >
+                    Clear comparison
+                </button>
+            </div>
+            <div id="comparison"></div>
+            <div class="compare-note">
+                <strong>Ready to choose?</strong>
+                <p>
+                    Open vehicle details to select your rental dates. Availability and the final
+                    total are confirmed during booking.
+                </p>
+            </div>
+        </main>
+        <footer id="site-footer"></footer>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Admin login | RideRent</title>
+        <link rel="icon" href="../assets/images/logo/mark.svg" />
+        <link rel="stylesheet" href="../assets/css/style.css?v=login-box-3" />
+        <link rel="stylesheet" href="../assets/css/admin.css?v=login-box-3" />
+        <script src="../assets/js/admin.js?v=login-box-3" defer></script>
+    </head>
+    <body data-admin-page="login">
+        <header class="admin-header">
+            <a class="logo" href="../index.html">Ride<span>Rent</span></a
+            ><span class="admin-area-label">Administration</span>
+        </header>
+        <main class="container">
+            <section class="auth-layout">
+                <aside class="auth-aside">
+                    <span class="eyebrow">RENTAL OPERATIONS</span>
+                    <h2>Welcome to<br />the driver’s seat.</h2>
+                    <p>Your fleet, reservations, and rental overview in one place.</p>
+                    <div class="road-mark" aria-hidden="true">↗</div>
+                    <span>RIDERENT ADMINISTRATION</span>
+                </aside>
+                <div class="form-panel">
+                    <div class="page-heading">
+                        <span class="eyebrow">ADMINISTRATOR ACCESS</span>
+                        <h1>Welcome back.</h1>
+                        <p>Sign in with your administrator account.</p>
+                    </div>
+                    <nav class="login-options" aria-label="Login account type">
+                        <a href="../login.html">Login as user</a
+                        ><a href="login.html" aria-current="page">Login as admin</a>
+                    </nav>
+                    <div id="admin-alert" class="alert" role="alert" tabindex="-1" hidden></div>
+                    <form id="admin-login" class="form-grid" method="post">
+                        <label
+                            >Email address<input
+                                type="email"
+                                name="email"
+                                id="email"
+                                autocomplete="username"
+                                maxlength="190"
+                                required /></label
+                        ><label
+                            >Password<span class="password-field"
+                                ><input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    autocomplete="current-password"
+                                    maxlength="72"
+                                    required
+                                /><button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="toggle-password"
+                                    aria-label="Show password"
+                                    aria-pressed="false"
+                                >
+                                    Show
+                                </button></span
+                            ></label
+                        ><button class="button" type="submit">Sign in</button>
+                    </form>
+                    <p class="form-foot">
+                        Customer account? <a href="../login.html">Use customer login</a>
+                    </p>
+                </div>
+            </section>
+            <noscript><p class="panel">Enable JavaScript to sign in.</p></noscript>
+        </main>
+    </body>
+</html>

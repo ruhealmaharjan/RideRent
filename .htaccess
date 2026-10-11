@@ -1,0 +1,11 @@
+DirectoryIndex index.html
+Options -Indexes
+<IfModule mod_headers.c>
+ <FilesMatch "\.(html|js|css)$">
+  Header always set Cache-Control "no-cache, must-revalidate"
+ </FilesMatch>
+ Header always set X-Content-Type-Options "nosniff"
+ Header always set Referrer-Policy "same-origin"
+ Header always set X-Frame-Options "DENY"
+ Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+</IfModule>

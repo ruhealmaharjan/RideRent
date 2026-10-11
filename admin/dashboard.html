@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Admin dashboard | RideRent</title>
+        <link rel="icon" href="../assets/images/logo/mark.svg" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/admin.css?v=dashboard-3" />
+        <script src="../assets/js/admin.js?v=dashboard-3" defer></script>
+    </head>
+    <body data-admin-page="dashboard">
+        <header class="admin-header">
+            <a class="logo" href="dashboard.html">Ride<span>Rent</span></a>
+            <nav class="actions admin-navigation" aria-label="Admin navigation">
+                <a class="button small secondary" href="vehicles.html">Vehicle management</a>
+                <a class="button small secondary" href="reset-user-password.html"
+                    >Reset user password</a
+                ><a class="button small secondary" href="messages.html">Rental desk messages</a
+                ><button class="button small secondary" id="admin-logout" type="button" disabled>
+                    Log out
+                </button>
+            </nav>
+        </header>
+        <main class="container">
+            <div id="admin-alert" class="alert" role="alert" tabindex="-1" hidden></div>
+            <p id="admin-loading" role="status">Checking administrator session…</p>
+            <div id="dashboard-content" hidden>
+                <div class="dashboard-heading">
+                    <div>
+                        <span class="eyebrow">ADMINISTRATION / OVERVIEW</span>
+                        <h1>Rental dashboard</h1>
+                        <p id="admin-welcome"></p>
+                    </div>
+                    <div class="dashboard-heading-actions">
+                        <span id="dashboard-updated" class="muted" role="status"></span
+                        ><button
+                            id="refresh-dashboard"
+                            class="button small secondary"
+                            type="button"
+                        >
+                            Refresh data</button
+                        ><a class="button small" href="bookings.html">Manage bookings</a
+                        ><a class="button small" href="vehicles.html">Vehicle management</a>
+                    </div>
+                </div>
+                <section
+                    id="admin-stats"
+                    class="admin-stats"
+                    aria-label="Rental statistics"
+                ></section>
+                <section class="section dashboard-table">
+                    <div class="section-title">
+                        <div>
+                            <span class="eyebrow">RESERVATIONS</span>
+                            <h2>Recent bookings</h2>
+                        </div>
+                        <a class="button small" href="bookings.html">Manage all bookings</a>
+                    </div>
+                    <div class="panel table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Booking</th>
+                                    <th>Customer</th>
+                                    <th>Vehicle</th>
+                                    <th>Pickup</th>
+                                    <th>Return</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Payment</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recent-bookings"></tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="section dashboard-table">
+                    <div class="section-title">
+                        <div>
+                            <span class="eyebrow">CUSTOMER DIRECTORY</span>
+                            <h2>Recent customers</h2>
+                        </div>
+                        <span class="muted">Latest registrations</span>
+                    </div>
+                    <div class="panel table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Joined</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recent-users"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <noscript><p class="panel">Enable JavaScript to view the dashboard.</p></noscript>
+        </main>
+    </body>
+</html>

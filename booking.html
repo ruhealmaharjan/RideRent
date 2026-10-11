@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content="RideRent vehicle rental: browse vehicles, check dates, and manage your bookings."
+        />
+        <title>Review Booking | RideRent</title>
+        <link rel="icon" href="assets/images/logo/mark.svg" type="image/svg+xml" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script type="module" src="assets/js/main.js"></script>
+    </head>
+    <body data-page="booking">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header id="site-header"></header>
+        <main id="main" class="container">
+            <div id="alert" class="alert" role="status" tabindex="-1" hidden></div>
+            <div class="page-heading">
+                <span class="eyebrow">ONE LAST LOOK</span>
+                <h1>Review your booking.</h1>
+                <p>Confirm your vehicle and rental dates before reserving.</p>
+            </div>
+            <div id="booking-summary" class="panel" aria-live="polite">Loading your rental…</div>
+            <form method="post" id="confirm-booking" class="panel">
+                <label class="checkbox"
+                    ><input type="checkbox" required />I agree to the
+                    <a href="terms.html">rental terms</a>.</label
+                >
+                <p class="muted">
+                    Your request starts as Pending. Payment is recorded by the rental desk; this
+                    site does not collect card details.
+                </p>
+                <button class="button" type="submit" disabled>Confirm booking</button>
+            </form>
+        </main>
+        <footer id="site-footer"></footer>
+        <noscript
+            ><p class="panel">Enable JavaScript to load vehicles and use your account.</p></noscript
+        >
+    </body>
+</html>

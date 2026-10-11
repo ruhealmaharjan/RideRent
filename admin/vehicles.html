@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Vehicles | RideRent Admin</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/admin.css" />
+        <script src="../assets/js/admin.js" defer></script>
+    </head>
+    <body data-admin-page="fleet">
+        <header class="admin-header">
+            <a class="logo" href="dashboard.html">Ride<span>Rent</span></a>
+            <nav class="actions admin-navigation" aria-label="Admin navigation">
+                <a class="button small secondary" href="reset-user-password.html"
+                    >Reset user password</a
+                ><a class="button small secondary" href="messages.html">Rental desk messages</a
+                ><button id="admin-logout" class="button small" disabled>Log out</button>
+            </nav>
+        </header>
+        <main class="container">
+            <div class="page-heading">
+                <span class="eyebrow">FLEET MANAGEMENT</span>
+                <h1>Vehicles</h1>
+            </div>
+            <div id="admin-alert" class="alert" role="alert" tabindex="-1" hidden></div>
+            <p id="fleet-loading">Checking administrator session…</p>
+            <section id="fleet-content" hidden>
+                <div class="section-title">
+                    <p>
+                        Manage fleet details and availability. Deactivation preserves booking
+                        history.
+                    </p>
+                    <a class="button" href="add-vehicle.html">Add vehicle</a>
+                </div>
+                <form id="fleet-filters" class="panel form-grid two">
+                    <label
+                        >Search<input
+                            name="q"
+                            placeholder="Vehicle, brand or registration"
+                            maxlength="100" /></label
+                    ><label
+                        >Category<select name="category">
+                            <option value="">All categories</option>
+                        </select></label
+                    ><label
+                        >Listing<select name="is_active">
+                            <option value="">All vehicles</option>
+                            <option value="1">Listed</option>
+                            <option value="0">Deactivated</option>
+                        </select></label
+                    ><label
+                        >Availability<select name="status">
+                            <option value="">All statuses</option>
+                            <option>Available</option>
+                            <option>Maintenance</option>
+                            <option>Unavailable</option>
+                        </select></label
+                    ><button class="button" type="submit">Apply filters</button
+                    ><button class="button secondary" type="reset">Reset</button>
+                </form>
+                <p id="fleet-count" role="status"></p>
+                <div class="panel table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Photo</th>
+                                <th>Vehicle</th>
+                                <th>Category</th>
+                                <th>Registration</th>
+                                <th>Price / day</th>
+                                <th>Availability</th>
+                                <th>Listing</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fleet-rows"></tbody>
+                    </table>
+                </div>
+                <div class="actions">
+                    <button id="fleet-prev" class="button secondary">Previous</button
+                    ><button id="fleet-next" class="button secondary">Next</button>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

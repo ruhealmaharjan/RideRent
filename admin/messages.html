@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Rental desk messages | RideRent</title>
+        <link rel="icon" href="../assets/images/logo/mark.svg" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/admin.css?v=admin-reset-1" />
+        <script src="../assets/js/admin.js?v=reset-page-2" defer></script>
+    </head>
+    <body data-admin-page="messages">
+        <header class="admin-header">
+            <a class="logo" href="../index.html">Ride<span>Rent</span></a>
+            <nav class="actions admin-navigation" aria-label="Admin navigation">
+                <a class="button small secondary" href="reset-user-password.html"
+                    >Reset user password</a
+                ><a class="button small secondary" href="messages.html" aria-current="page"
+                    >Rental desk messages</a
+                ><button class="button small secondary" id="admin-logout" type="button" disabled>
+                    Log out
+                </button>
+            </nav>
+        </header>
+        <main class="container">
+            <div id="admin-alert" class="alert" role="alert" tabindex="-1" hidden></div>
+            <p id="admin-loading" role="status">Checking administrator session…</p>
+            <div id="dashboard-content" hidden>
+                <div class="page-heading">
+                    <h1>Rental desk messages</h1>
+                    <p id="admin-welcome"></p>
+                    <a class="button small secondary" href="dashboard.html">Back to dashboard</a>
+                </div>
+                <div id="message-list" class="form-grid"></div>
+                <div class="actions">
+                    <button class="button small secondary" id="messages-prev">Previous</button
+                    ><span id="messages-page" role="status"></span
+                    ><button class="button small secondary" id="messages-next">Next</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

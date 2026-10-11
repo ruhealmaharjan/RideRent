@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Liked vehicles | RideRent</title>
+        <link rel="icon" href="assets/images/logo/mark.svg" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script type="module" src="assets/js/main.js"></script>
+    </head>
+    <body data-page="favorites">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header id="site-header"></header>
+        <main id="main" class="container liked-page">
+            <div id="alert" class="alert" role="status" tabindex="-1" hidden></div>
+            <section class="liked-header" aria-labelledby="liked-title">
+                <div>
+                    <span class="eyebrow">YOUR PERSONAL COLLECTION</span>
+                    <h1 id="liked-title">Liked vehicles</h1>
+                    <p>
+                        A shortlist for your next journey. Compare your picks and find the right
+                        ride.
+                    </p>
+                    <a class="button" href="vehicles.html">Explore more vehicles</a>
+                </div>
+                <div class="liked-summary">
+                    <span class="liked-heart" aria-hidden="true">♡</span
+                    ><strong id="liked-count">—</strong><span>vehicles in your collection</span>
+                </div>
+            </section>
+            <section aria-labelledby="collection-title">
+                <div class="liked-toolbar">
+                    <div>
+                        <h2 id="collection-title">Your collection</h2>
+                        <p id="liked-description" role="status">Loading your liked vehicles…</p>
+                    </div>
+                    <a class="button small secondary" href="compare.html">View comparison</a>
+                </div>
+                <div id="saved-grid" class="vehicle-grid catalogue" aria-busy="true"></div>
+            </section>
+            <p class="liked-footnote">
+                Likes are saved to your account. Rental availability is checked when you choose your
+                dates.
+            </p>
+        </main>
+        <footer id="site-footer"></footer>
+    </body>
+</html>

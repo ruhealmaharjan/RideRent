@@ -1,0 +1,26 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 700 400"
+    role="img"
+    aria-label="bike illustration"
+>
+    <rect width="700" height="400" fill="#e9efed" />
+    <circle cx="506" cy="124" r="100" fill="#dde7e2" />
+    <path d="M60 306H642" stroke="#baccc2" stroke-width="2" />
+    <ellipse cx="350" cy="317" rx="245" ry="16" fill="#cbd8d0" />
+    <path
+        d="M210 275 L285 190 L365 275 L455 180 L482 277 M285 190 L375 180 L390 155 M445 145 L474 145 L492 185"
+        fill="none"
+        stroke="#c78027"
+        stroke-width="22"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+    <path d="M272 176h72" stroke="#172727" stroke-width="17" stroke-linecap="round" />
+    <circle cx="210" cy="282" r="46" fill="#203130" />
+    <circle cx="210" cy="282" r="24" fill="#afc1ba" />
+    <circle cx="210" cy="282" r="12" fill="#526961" />
+    <circle cx="485" cy="282" r="46" fill="#203130" />
+    <circle cx="485" cy="282" r="24" fill="#afc1ba" />
+    <circle cx="485" cy="282" r="12" fill="#526961" />
+</svg>

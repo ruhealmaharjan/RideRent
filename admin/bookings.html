@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Manage bookings | RideRent</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/admin.css?v=payment-actions-1" />
+        <script src="../assets/js/admin.js?v=payment-actions-1" defer></script>
+    </head>
+    <body data-admin-page="bookings">
+        <header class="admin-header">
+            <a class="logo" href="dashboard.html">Ride<span>Rent</span></a>
+            <nav class="actions admin-navigation" aria-label="Admin navigation">
+                <a class="button small secondary" href="reset-user-password.html"
+                    >Reset user password</a
+                ><a class="button small secondary" href="messages.html">Rental desk messages</a
+                ><a href="dashboard.html">Dashboard</a
+                ><button class="button small secondary" id="admin-logout" type="button" disabled>
+                    Log out
+                </button>
+            </nav>
+        </header>
+        <main class="container">
+            <div id="admin-alert" class="alert" role="alert" tabindex="-1" hidden></div>
+            <p id="admin-loading" role="status">Checking administrator session…</p>
+            <div id="dashboard-content" hidden>
+                <div class="page-heading">
+                    <span class="eyebrow">RENTAL REQUESTS</span>
+                    <h1>Manage bookings.</h1>
+                    <p id="admin-welcome"></p>
+                </div>
+                <form id="booking-filters" class="booking-filters">
+                    <label
+                        >Search<input
+                            type="search"
+                            id="booking-search"
+                            maxlength="100"
+                            placeholder="Booking ID, customer or vehicle" /></label
+                    ><label
+                        >Status<select id="booking-status">
+                            <option value="">All statuses</option>
+                            <option>Pending</option>
+                            <option>Confirmed</option>
+                            <option>Completed</option>
+                            <option>Cancelled</option>
+                        </select></label
+                    ><button class="button" type="submit">Apply filters</button>
+                </form>
+                <p class="muted">
+                    Approve pending requests or cancel pending and confirmed bookings. Completed
+                    rentals cannot be cancelled. Mark confirmed rentals complete after return.
+                </p>
+                <div class="panel table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Booking</th>
+                                <th>Customer</th>
+                                <th>Vehicle</th>
+                                <th>Pickup</th>
+                                <th>Return</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Payment</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recent-bookings"></tbody>
+                    </table>
+                </div>
+                <nav class="actions" aria-label="Booking pages">
+                    <button class="button small secondary" id="previous-page" type="button">
+                        Previous</button
+                    ><span id="booking-count" role="status"></span
+                    ><button class="button small secondary" id="next-page" type="button">
+                        Next
+                    </button>
+                </nav>
+            </div>
+        </main>
+    </body>
+</html>

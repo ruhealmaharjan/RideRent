@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Edit vehicle | RideRent Admin</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/admin.css" />
+        <script src="../assets/js/admin.js" defer></script>
+    </head>
+    <body data-admin-page="edit-vehicle">
+        <header class="admin-header">
+            <a class="logo" href="dashboard.html">Ride<span>Rent</span></a>
+            <nav class="actions admin-navigation" aria-label="Admin navigation">
+                <a class="button small secondary" href="reset-user-password.html"
+                    >Reset user password</a
+                ><a class="button small secondary" href="messages.html">Rental desk messages</a
+                ><button id="admin-logout" class="button small" disabled>Log out</button>
+            </nav>
+        </header>
+        <main class="container">
+            <div class="page-heading">
+                <span class="eyebrow">FLEET MANAGEMENT</span>
+                <h1>Edit vehicle</h1>
+            </div>
+            <div id="admin-alert" class="alert" role="alert" tabindex="-1" hidden></div>
+            <p id="fleet-loading">Checking administrator session…</p>
+            <section id="fleet-content" hidden>
+                <p><a href="vehicles.html">Back to vehicles</a></p>
+                <form id="fleet-form" class="panel form-grid two" enctype="multipart/form-data">
+                    <label
+                        >Vehicle name<input
+                            name="vehicle_name"
+                            type="text"
+                            maxlength="120"
+                            required /></label
+                    ><label>Brand<input name="brand" type="text" maxlength="80" required /></label
+                    ><label>Model<input name="model" type="text" maxlength="80" required /></label
+                    ><label
+                        >Registration number<input
+                            name="registration_number"
+                            type="text"
+                            maxlength="50"
+                            required /></label
+                    ><label
+                        >Year<input
+                            name="manufacturing_year"
+                            type="number"
+                            min="1980"
+                            required /></label
+                    ><label
+                        >Seats<input name="seats" type="number" min="1" max="50" required /></label
+                    ><label
+                        >Price per day (NPR)<input
+                            name="price_per_day"
+                            type="number"
+                            min="0.01"
+                            max="99999999.99"
+                            step="0.01"
+                            required /></label
+                    ><label>Category<select name="category_id" required></select></label
+                    ><label
+                        >Fuel<select name="fuel_type">
+                            <option>Petrol</option>
+                            <option>Diesel</option>
+                            <option>Electric</option>
+                            <option>Hybrid</option>
+                        </select></label
+                    ><label
+                        >Transmission<select name="transmission">
+                            <option>Manual</option>
+                            <option>Automatic</option>
+                        </select></label
+                    ><label
+                        >Availability<select name="availability_status">
+                            <option>Available</option>
+                            <option>Maintenance</option>
+                            <option>Unavailable</option>
+                        </select></label
+                    ><label
+                        >Listing status<select name="is_active">
+                            <option value="1">Listed</option>
+                            <option value="0">Deactivated</option>
+                        </select></label
+                    ><label class="full"
+                        >Description<textarea
+                            name="description"
+                            rows="5"
+                            maxlength="10000"
+                            required
+                        ></textarea></label
+                    ><label class="full"
+                        >Vehicle photo<input
+                            type="file"
+                            name="image"
+                            accept="image/jpeg,image/png,image/webp"
+                        /><small
+                            >JPEG, PNG or WebP; maximum 2 MB, 4000 pixels per side and 12
+                            megapixels. On edit, leave empty to retain the current photo.</small
+                        ></label
+                    ><img
+                        id="fleet-preview"
+                        alt="Vehicle photo preview"
+                        hidden
+                        class="fleet-photo-preview"
+                    />
+                    <div class="actions full">
+                        <button type="submit" class="button">Save vehicle</button
+                        ><a class="button secondary" href="vehicles.html">Cancel</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
